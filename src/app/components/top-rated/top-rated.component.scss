@@ -1,0 +1,57 @@
+@import "../../../styles/variables.scss";
+
+.page-wrapper {
+	gap: 1.5rem;
+
+	.title {
+		padding-top: 1.5rem;
+	}
+
+	.search {
+		width: 100%;
+		max-width: 500px;
+
+		input {
+			max-width: 500px;
+			width: 100%;
+			height: 50px;
+			margin: auto;
+
+			&:hover {
+				border-color: $red-hover;
+			}
+
+			&:focus {
+				box-shadow: 0 0 0 0.2rem #{$red-hover};
+				border-color: $red-hover;
+			}
+		}
+	}
+}
+
+::ng-deep .paginator {
+	background-color: transparent;
+	color: white;
+	font-weight: 400;
+
+	.p-paginator-page {
+		&.p-highlight {
+			background-color: $red-hover !important;
+			border-radius: 2px;
+			color: white !important;
+			transition: border-color 0.2s ease-in-out,
+				background-color 0.2 ease-in-out;
+
+			&:hover {
+				color: #495057;
+				border-color: transparent;
+				background: #e9ecef;
+			}
+
+			&:focus {
+				box-shadow: 0 0 0 0.2rem #495057;
+				border-color: $red-hover;
+			}
+		}
+	}
+}
